@@ -6,8 +6,7 @@ A python package that allows to implement and draw various examples of progress 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # Demo
-![Alt text](https://raw.githubusercontent.com/kiahamedi/MagicProgress/main/screenshots/magicprogress.gif "Optional title")
-
+![Alt text](https://raw.githubusercontent.com/kiahamedi/MagicProgress/main/screenshots/mgprogress.gif "Optional title")
 
 
 # Examples of How To Use
