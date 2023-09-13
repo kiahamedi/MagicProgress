@@ -8,6 +8,11 @@ A python package that allows to implement and draw various examples of progress 
 # Demo
 ![Alt text](https://raw.githubusercontent.com/kiahamedi/MagicProgress/main/screenshots/mgprogress.gif "Optional title")
 
+# Install
+```python
+pip install MagicProgress
+```
+<br>
 
 # Examples of How To Use
 ## Progress
