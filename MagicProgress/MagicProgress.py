@@ -118,6 +118,7 @@ def EmojiProgress(x):
     base=10
     p = base * round(x/base)
     if p == 0 : p = 1
+    emoji = "😐"
     if p != 100:
         p = int(str(p).replace("0", ""))
         progress_list = ['⬜️'] * 10
@@ -129,15 +130,15 @@ def EmojiProgress(x):
                 progress_list[pointer - 1] = "⬜️"
             pointer += 1
         progress = ''.join(progress_list)
+        if p == 1 : emoji = "😐"
+        elif p == 2 or p == 3: emoji = "🙂"
+        elif p == 4 or p == 5: emoji = "😃"
+        elif p == 6 or p == 7 or p == 8: emoji = "😁"
+        elif p == 9 or p == 10: emoji = "😍"
     else:
         progress_list = [progress_icon] * 10
         progress = ''.join(progress_list)
-    emoji = "😐"
-    if p == 1 : emoji = "😐"
-    elif p == 2 or p == 3: emoji = "🙂"
-    elif p == 4 or p == 5: emoji = "😃"
-    elif p == 6 or p == 7 or p == 8: emoji = "😁"
-    elif p == 9 or p == 10: emoji = "😍"
+        emoji = "😍"
     progress = f"{progress} {emoji}"
     print(end=f"\r {progress}")
 
@@ -239,6 +240,7 @@ def DrawEmojiProgress(x):
     base=10
     p = base * round(x/base)
     if p == 0 : p = 1
+    emoji = "😐"
     if p != 100:
         p = int(str(p).replace("0", ""))
         progress_list = ['⬜️'] * 10
@@ -250,14 +252,14 @@ def DrawEmojiProgress(x):
                 progress_list[pointer - 1] = "⬜️"
             pointer += 1
         progress = ''.join(progress_list)
+        if p == 1 : emoji = "😐"
+        elif p == 2 or p == 3: emoji = "🙂"
+        elif p == 4 or p == 5: emoji = "😃"
+        elif p == 6 or p == 7 or p == 8: emoji = "😁"
+        elif p == 9 or p == 10: emoji = "😍"
     else:
         progress_list = [progress_icon] * 10
         progress = ''.join(progress_list)
-    emoji = "😐"
-    if p == 1 : emoji = "😐"
-    elif p == 2 or p == 3: emoji = "🙂"
-    elif p == 4 or p == 5: emoji = "😃"
-    elif p == 6 or p == 7 or p == 8: emoji = "😁"
-    elif p == 9 or p == 10: emoji = "😍"
+        emoji = "😍"
     progress = f"{progress} {emoji}"
     return progress
