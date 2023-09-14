@@ -16,6 +16,10 @@ from time import sleep
 import sys
 
 
+
+
+
+
 def Progress(x):
     progress_icon = "🟩"
     base=10
@@ -109,6 +113,35 @@ def ProgressNoColorPercentage(x):
 
 
 
+def EmojiProgress(x):
+    progress_icon = "🟩"
+    base=10
+    p = base * round(x/base)
+    if p == 0 : p = 1
+    if p != 100:
+        p = int(str(p).replace("0", ""))
+        progress_list = ['⬜️'] * 10
+        pointer = 1
+        for i in progress_list:
+            if pointer <= p:
+                progress_list[pointer - 1] = progress_icon
+            else:
+                progress_list[pointer - 1] = "⬜️"
+            pointer += 1
+        progress = ''.join(progress_list)
+    else:
+        progress_list = [progress_icon] * 10
+        progress = ''.join(progress_list)
+    emoji = "😐"
+    if p == 1 : emoji = "😐"
+    elif p == 2 or p == 3: emoji = "🙂"
+    elif p == 4 or p == 5: emoji = "😃"
+    elif p == 6 or p == 7 or p == 8: emoji = "😁"
+    elif p == 9 or p == 10: emoji = "😍"
+    progress = f"{progress} {emoji}"
+    print(end=f"\r {progress}")
+
+
 def DrawProgress(x):
     progress_icon = "🟩"
     base=10
@@ -198,4 +231,33 @@ def DrawProgressNoColorPercentage(x):
         progress_list = [progress_icon] * 10
         progress = ''.join(progress_list)
     progress = f"[{progress}]"
+    return progress
+
+
+def DrawEmojiProgress(x):
+    progress_icon = "🟩"
+    base=10
+    p = base * round(x/base)
+    if p == 0 : p = 1
+    if p != 100:
+        p = int(str(p).replace("0", ""))
+        progress_list = ['⬜️'] * 10
+        pointer = 1
+        for i in progress_list:
+            if pointer <= p:
+                progress_list[pointer - 1] = progress_icon
+            else:
+                progress_list[pointer - 1] = "⬜️"
+            pointer += 1
+        progress = ''.join(progress_list)
+    else:
+        progress_list = [progress_icon] * 10
+        progress = ''.join(progress_list)
+    emoji = "😐"
+    if p == 1 : emoji = "😐"
+    elif p == 2 or p == 3: emoji = "🙂"
+    elif p == 4 or p == 5: emoji = "😃"
+    elif p == 6 or p == 7 or p == 8: emoji = "😁"
+    elif p == 9 or p == 10: emoji = "😍"
+    progress = f"{progress} {emoji}"
     return progress

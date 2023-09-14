@@ -2,7 +2,9 @@ from MagicProgress.MagicProgress import Progress
 from MagicProgress.MagicProgress import ProgressNoPercentage
 from MagicProgress.MagicProgress import ProgressNoColor
 from MagicProgress.MagicProgress import ProgressNoColorPercentage
+from MagicProgress.MagicProgress import EmojiProgress
 from MagicProgress.MagicProgress import DrawProgress
 from MagicProgress.MagicProgress import DrawProgressNoPercentage
 from MagicProgress.MagicProgress import DrawProgressNoColor
 from MagicProgress.MagicProgress import DrawProgressNoColorPercentage
+from MagicProgress.MagicProgress import DrawEmojiProgress
