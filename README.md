@@ -1,6 +1,6 @@
 # MagicProgress
 A python package that allows to implement and draw various examples of progress bar.
-> version 0.0.3
+> version 0.0.4
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -74,6 +74,21 @@ for i in range(1, 101):
 ```
 <br>
 
+## Progress With Emoji
+To have a dynamic progress bar with Emoji, it is enough to send your percentage to it in each period<br>
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 😍<br>
+![Alt text](https://raw.githubusercontent.com/kiahamedi/MagicProgress/main/screenshots/emoji.gif "Optional title")
+<br>
+```python
+from MagicProgress import EmojiProgress
+from time import sleep
+
+for i in range(1, 101):
+    EmojiProgress(i)
+    sleep(0.01)
+```
+<br>
+
 
 ## Draw Progress
 To draw a progress bar, send your percentage to this function and it will return you a progress bar<br>
@@ -124,6 +139,17 @@ progress = DrawProgressNoColorPercentage(60)
 print(progress)
 ```
 
+
+## Draw Progress Emoji
+To draw a progress bar with Emoji, send your percentage to this function and it will return you a progress bar<br>
+🟩🟩🟩🟩🟩🟩🟩🟩⬜️⬜️ 😁 
+<br>
+```python
+from MagicProgress import DrawEmojiProgress
+
+progress = DrawEmojiProgress(80)
+print(progress)
+```
 
 
 ## Are you a developer?
